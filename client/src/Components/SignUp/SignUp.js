@@ -7,7 +7,6 @@ class SignUp extends Component {
             <div>
                 <div className="container ">
                     <div className="wrap-container">
-                   
                     <form className="form">
                     <fieldset>
                     <legend>User Registration Form</legend> 
@@ -43,7 +42,9 @@ class SignUp extends Component {
                         </div>
                         </fieldset>
                     </form>
+                    <a className="new" href="./signUp">New User?</a>
                     </div>
+                    
                 </div>
             </div>
         )
