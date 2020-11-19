@@ -6,7 +6,12 @@ class SignIn extends Component {
         return (
             <div className="container">
                 <div className="wraper">
-                    <div className="message"> Welcome Back!!</div>
+                    <div>
+                    <img src="./logo.png" alt="image"/>
+                    <div className="message"> Welcomes You!!</div>
+                        
+                    </div>
+                    
                     <fieldset>
                         <legend>Login</legend>
                         <form className="form">

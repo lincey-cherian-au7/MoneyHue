@@ -7,6 +7,10 @@ class SignUp extends Component {
             <div>
                 <div className="container ">
                     <div className="wrap-container">
+                    <div>
+                    <img src="./logo.png" alt="image"/>
+                       
+                    </div>
                     <form className="form">
                     <fieldset>
                     <legend>User Registration Form</legend> 
