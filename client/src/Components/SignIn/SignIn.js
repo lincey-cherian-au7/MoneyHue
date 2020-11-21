@@ -12,7 +12,7 @@ class SignIn extends Component {
                         
                     </div>
                     
-                    <fieldset>
+                    <fieldset className="field" >
                         <legend>Login</legend>
                         <form className="form">
                             <div className="row">

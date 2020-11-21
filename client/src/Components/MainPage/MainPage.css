@@ -1,0 +1,132 @@
+.contain{
+    width:100%;
+}
+.media_container{
+    display: flex;
+    width:100%;
+    height:300px;
+    margin-top:0.5rem;
+    justify-content: space-between;
+    
+   
+}
+.carousel_container{
+    width:60%;
+    height: 100%;
+    object-fit: contain;
+    padding-bottom: 50em;
+ 
+}
+.video_container{
+    padding-left: 5px;
+    width:40%;
+    height:100%;
+    object-fit: cover;
+    
+}
+.button_section{
+    padding-top: 40px;
+    justify-content: space-evenly;
+    display: flex;
+    
+
+}
+.button{
+    font-family: Arial, Helvetica, sans-serif;
+    height:100px;
+    width:300px;
+    border:#E5E6E4;
+    box-shadow: 0px 4px 8px #A6A2A2 ;
+    background-color: #847577;
+    color:white;
+}
+.button:hover{
+    transform: scale(.8);
+    color:black;
+}
+.loan_container{
+    display: flex;
+    width:100%;
+    height:200px;
+    margin-top:1rem;
+    justify-content: space-between;  
+}
+.button_container{
+    margin-top: 20px;
+    display: inline;
+    padding-left: 35px;
+    justify-content: space-between; 
+    width:30%;   
+}
+.circle{
+    height:220px;
+    width:220px;
+    border:5px solid white;
+    background-color: transparent;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.buttontag{
+    width:150px;
+    height: 80px;
+    
+    border:transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+.buttontag:hover{
+    background-color: #847577 ;
+    color:white;
+    transform: scale(1.1);
+}
+.row_container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;  
+}
+.blog_container{
+    margin-top: 20px;
+    margin-right: 10px;
+    display: flex;
+    width:70%;
+    text-align: justify;
+    
+    
+}
+.section_ad{
+    width: 100%;
+    background-image: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding:40px;
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    font-size: larger;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.review_container{
+    width:100%;
+    height:500px;
+    margin-top:5px;
+    align-items: center;
+    
+}
+.review_section{
+    align-items: center;
+    width:100%;
+    height:100%;
+    background-color:#8C7AA9;
+    padding-top:50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+
+}
+
