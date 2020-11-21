@@ -4,53 +4,50 @@ import './SignUp.css'
 class SignUp extends Component {
     render() {
         return (
-            <div>
-                <div className="container ">
-                    <div className="wrap-container">
-                    <div>
-                    <img src="./logo.png" alt="image"/>
-                       
-                    </div>
-                    <form className="form">
-                    <fieldset>
-                    <legend>User Registration Form</legend> 
-                        <div className="row">
-                            <div class="column">
-                                <label >First Name</label>
-                                <input type="text" name="fname" placeholder="Firstname"></input>
+            
+                <div className="container_box">
+                    <div className="wraper">
+                    <div><img src="./logo.png" alt="logo"/></div>
+                    <form className="form_box">
+                        <fieldset className="field">
+                        <legend style={{color:"white"}}>User Registration Form</legend> 
+                            <div className="row_box">
+                                <div class="column_box">
+                                    <label >First Name</label>
+                                    <input type="text" name="fname" placeholder="Firstname"></input>
+                                </div>
+                            <div class="column_box">
+                                    <label>Last Name</label>
+                                    <input type="text" name="lname" placeholder="Lastname"></input>
                             </div>
-                           <div class="column">
-                                <label>Last Name</label>
-                                <input type="text" name="lname" placeholder="Lastname"></input>
-                           </div>
-                        </div>
-                        <br/>
-                        <div className="row">
-                            <div class="column">
-                                <label >Email</label>
-                                <input type="text" name="Email" placeholder="Email"></input> 
                             </div>
-                        </div><br/>
-                        <div className="row">
-                            <div class="column">
-                                <label>Password</label>
-                                <input type="password" name="Password" placeholder="Password"></input>
+                            <br/>
+                            <div className="row_box">
+                                <div class="column_box">
+                                    <label >Email</label>
+                                    <input type="text" name="Email" placeholder="Email"></input> 
+                                </div>
                             </div>
-                            <div class="column">
-                                <label>Confirm Password</label>
-                                <input type="password" name="ConfirmPassword" placeholder="ConfirmPassword"></input>
+                            <div className="row_box">
+                                <div class="column_box">
+                                    <label>Password</label>
+                                    <input type="password" name="Password" placeholder="Password"></input>
+                                </div>
+                                <div class="column_box">
+                                    <label>Confirm Password</label>
+                                    <input type="password" name="ConfirmPassword" placeholder="ConfirmPassword"></input>
+                                </div>
+                            </div><br/>
+                            <div>
+                                <button type="submit" className="button_box">Register</button>
                             </div>
-                        </div><br/>
-                        <div>
-                            <button type="submit" className="button">Register</button>
-                        </div>
                         </fieldset>
                     </form>
-                    <a className="new" href="./signUp">New User?</a>
+                    <a className="new_box" href="./signUp">New User?</a>
                     </div>
                     
                 </div>
-            </div>
+         
         )
     }
 }
