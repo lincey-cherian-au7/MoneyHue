@@ -7,7 +7,7 @@ class Navigation extends Component {
     render() {
         return (
             <div >
-                <Navbar collapseOnSelect expand="lg" variant="dark" style={{backgroundColor:"#410B13",color:"white", fontSize:"larger" }}>
+                <Navbar collapseOnSelect expand="lg" variant="dark" style={{backgroundColor:"#5F021F",color:"white", fontSize:"larger" }}>
                     <Navbar.Brand href="#home" style={{fontFamily:"Comic Sans MS",fontSize:"25px",fontWeight:"bold" }}>MoneyHue</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

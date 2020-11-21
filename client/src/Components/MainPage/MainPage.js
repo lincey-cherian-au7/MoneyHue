@@ -77,7 +77,7 @@ class MainPage extends Component {
                 </div>
                 <div/>
                 <Card>
-                    <Card.Footer style={{backgroundColor:"#410B13",color:"white", fontSize:"medium"}}>CopyRight @2020 MoneyHue Private Limited.</Card.Footer>
+                    <Card.Footer style={{backgroundColor:"#5F021F",color:"white", fontSize:"medium"}}>CopyRight @2020 MoneyHue Private Limited.</Card.Footer>
                 </Card>
                 
                 
