@@ -4,14 +4,32 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalculator, faMoneyBill ,faFileAlt,faClock } from '@fortawesome/free-solid-svg-icons'
 import Carousel from '../CarouselComp/CarouselComp';
 import VideoComponent from '../Video/VideoComponent';
+import CalculatorModal from '../CalculatorModal/CalculatorModal'
 import {Card} from 'react-bootstrap';
 import './MainPage.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ReviewCarousel from '../ReviewCarousel/ReviewCarousel';
+import LoanApplication from '../LoanApplication/LoanApplication'
 
 
 class MainPage extends Component {
+    constructor(){
+        super()
+        this.state={
+            modalShow:false,
+            
+        }
+        this.setModalShow=(modalShow)=>{
+            this.setState({modalShow})
+        }   
+    }
+    
+
     render() {
+        const setApplication=()=>{
+            <LoanApplication/>
+        }
+        
         return (
             <div>
                 <div className="media_container">
@@ -23,23 +41,27 @@ class MainPage extends Component {
                     </div>
                 </div>
                 <div className="button_section">
-                    <button class="btn-light btn-lg button ">Personal Loan</button>
+                    <button class="btn-light btn-lg button" onClick={setApplication} type="submit" href="">Personal Loan</button>
                     <button class="btn-light btn-lg button ">Home Loan</button>
                     <button class="btn-light btn-lg button ">Car Loan</button>
                     <button class="btn-light btn-lg button ">Credit Card</button>
                 </div>
+                
+                <CalculatorModal
+                    show={this.state.modalShow}
+                    onHide={() => this.setModalShow(false)}/>
                 <div className="loan_container">
                     <div className="button_container">
                         <div>
                             <div className="row_container">
-                                <button className="buttontag">Personal Loan EMI Calculator</button>
-                                <button className="buttontag">Home Loan EMI Calculator</button>
+                                <button className="buttontag" onClick={() => this.setModalShow(true)}>Personal Loan EMI Calculator</button>
+                                <button className="buttontag" onClick={() => this.setModalShow(true)}>Home Loan EMI Calculator</button>
                             </div>
                         </div>
                         <div>
                             <div className="row_container">
-                                <button className="buttontag">Car Loan EMI Calculator</button>
-                                <button className="buttontag">Credit Card  EMI Calculator</button>
+                                <button className="buttontag" onClick={() => this.setModalShow(true)}>Car Loan EMI Calculator</button>
+                                <button className="buttontag" onClick={() => this.setModalShow(true)}>Credit Card  EMI Calculator</button>
                             </div>
                         </div> 
                     </div>
@@ -77,7 +99,7 @@ class MainPage extends Component {
                 </div>
                 <div/>
                 <Card>
-                    <Card.Footer style={{backgroundColor:"#5F021F",color:"white", fontSize:"medium"}}>CopyRight @2020 MoneyHue Private Limited.</Card.Footer>
+                    <Card.Footer style={{backgroundColor:"#5F021F",color:"white", fontSize:"small"}}>CopyRight @2020 MoneyHue Private Limited.</Card.Footer>
                 </Card>
                 
                 
