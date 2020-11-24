@@ -1,0 +1,45 @@
+.application_contain{
+    display:flex;
+    justify-content: space-between;
+    padding-top:20px;
+    padding-left:15px;
+
+}
+.application{
+    width:280px;
+    height:380px;
+    background-color:#E5E6E4;
+    margin-left: 12px;
+    padding:22px 8px 22px 8px;
+    border:1px solid maroon;
+    border-radius: 6px;
+
+    
+}
+.dlist-align {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 8px;
+}
+.dlist-align dt {
+    width: 90px;
+    word-wrap: break-word;
+    text-align: left;
+    font-weight: normal;
+ }
+.dlist-align dd {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    float:left; 
+    text-align: left;
+   padding-left: 17px;
+}
+button{
+    background-color: #5F021F;
+    color:white;
+    border-radius: 15px;
+    width:180px;
+    height:40px;
+}

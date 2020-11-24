@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import ReadMoreReact from 'read-more-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalculator, faMoneyBill ,faFileAlt,faClock } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalculator, faMoneyBill ,faFileAlt,faClock } from '@fortawesome/free-solid-svg-icons';
 import Carousel from '../CarouselComp/CarouselComp';
 import VideoComponent from '../Video/VideoComponent';
-import CalculatorModal from '../CalculatorModal/CalculatorModal'
+import CalculatorModal from '../CalculatorModal/CalculatorModal';
 import {Card} from 'react-bootstrap';
-import './MainPage.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import './MainPage.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ReviewCarousel from '../ReviewCarousel/ReviewCarousel';
-import LoanApplication from '../LoanApplication/LoanApplication'
+import LoanApplication from '../LoanApplication/LoanApplication';
 
 
 class MainPage extends Component {
@@ -23,8 +23,6 @@ class MainPage extends Component {
             this.setState({modalShow})
         }   
     }
-    
-
     render() {
         const setApplication=()=>{
             <LoanApplication/>
