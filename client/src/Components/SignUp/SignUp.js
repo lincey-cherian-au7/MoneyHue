@@ -27,6 +27,10 @@ class SignUp extends Component {
                                     <label >Email</label>
                                     <input type="text" name="Email" placeholder="Email"></input> 
                                 </div>
+                                <div class="column_box">
+                                    <label >Mobile</label>
+                                    <input type="text" name="mobile" placeholder="Mobile"></input> 
+                                </div>
                             </div>
                             <div className="row_box">
                                 <div class="column_box">
