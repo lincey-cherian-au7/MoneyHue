@@ -16,5 +16,8 @@ router.post('/verify/:userid',userController.verifyUser);
 /*POST Email Verify */
 router.get('/verifymail/:token/:userid',userController.verifyMail );
 
+/*POST User login */
+router.post('/login',userController.login);
+
 
 module.exports=router;

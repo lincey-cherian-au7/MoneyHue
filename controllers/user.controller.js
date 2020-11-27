@@ -5,8 +5,6 @@ require("dotenv").config()
 const Nexmo = require('nexmo');
 const nodemailer = require('nodemailer');
 
-
-
 const nexmo = new Nexmo({
   apiKey: process.env.VONAGE_API,
   apiSecret: process.env.VONAGE_API_SECRET,
@@ -92,6 +90,7 @@ const sendOTP=(mobile,otp)=>{
     })
 }
 
+// Creating a random String
 const randomString = length =>{
     let text ="";
     const possible ='ygdn20yfgsd1p23h8739x814mjsw'
@@ -101,6 +100,7 @@ const randomString = length =>{
     return text;
 }
 
+//Email Sending Function
 const emailVerify=(mail,token,userid)=>{
     var mailContent ={
         from:process.env.MAIL_ID,
@@ -117,6 +117,7 @@ const emailVerify=(mail,token,userid)=>{
     })
 }
 
+// Verifying the mobile number
 userController.verifyUser =async(req,res)=>{
     let otp = req.body.otp;
     let userid = req.params.userid
@@ -129,6 +130,8 @@ userController.verifyUser =async(req,res)=>{
             return res.status(200).json({message:"Phone number verified sucessfully."})
     })
 }
+
+//Verifiying Email
 userController.verifyMail= async(req,res,next)=>{
     let emailToken = req.params.token;
     let userid = req.params.userid;
@@ -140,5 +143,41 @@ userController.verifyMail= async(req,res,next)=>{
     })
 }
 
+// User Login
+userController.login =async(req,res)=>{
+    let email = req.body.email
+    let password= req.body.password
+    let userData = await User.findOne({email})
+    if(!userData)
+        return res.status(201).json({message:"User doesnot exist"})
+    else{
+        if(!userData.verify==0){  //To change
+            if(userData.emailverify==0){
+                console.log(!userData.verify)
+                return res.status(201).json({message:'Mobile and Email Verification Pending.'})
+            }else{
+                return res.status(201).json({message:"Mobile verification is pending"})
+            }
+            
+        }else{
+            if(userData.emailverify==0){
+                return res.status(201).json({message:'Email Verification Pending.'})
+            }
+        
+        }
+        bcrypt.compare(password, userData.password, (err, isMatch)=>{
+            if(err)
+                return res.status(401).json({message:'Password doesnot match'})
+            else{
+                const {userid,email,fname,usertype} = userData
+                const token = jwt.sign({_id:userData.userid},process.env.JWT_SECRET)
+                res.cookie("t",token,{expire:new Date()+9999});
+                req.profile = userData
+                console.log(token,req.profile)
+                return res.json({token,user:{userid,email,usertype,fname}})
+            }
+        })
+    }
+}
 
 module.exports= userController;
