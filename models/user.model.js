@@ -25,13 +25,23 @@ const User = mongoose.model('user',new mongoose.Schema({
         type:String,
         required:true
     },
+    emailToken:{
+        type:String
+    },
     mobile:{
         type:Number,
         required:true
     },
+    otp:{
+        type:Number
+    },
     verify: {
         type:Number,
         default: 0
+    },
+    emailverify:{
+        type:Number,
+        default:0
     }
 },{
     timestamps:true
