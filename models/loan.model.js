@@ -1,6 +1,10 @@
-const mongoose =require('mongoose')
+const mongoose = require('mongoose');
 
-const Application = mongoose.model('application',new mongoose.Schema({
+const Loan = mongoose.model('loan',new mongoose.Schema({
+    loanid:{
+        type:String,
+        required:true
+    },
     applnid:{
         type:String,
         required:true
@@ -18,11 +22,11 @@ const Application = mongoose.model('application',new mongoose.Schema({
         type:String,
         required:true
     },
-    loanAmount:{
+    loanApproved:{
         type:Number,
         required:true
     },
-    interest: {
+    interestApproved: {
         type:Number,
         required:true
     },
@@ -30,31 +34,28 @@ const Application = mongoose.model('application',new mongoose.Schema({
         type:Number,
         required:true
     },
-    emi:{
+    emiApproved:{
         type:Number,
         required:true
     },
     active:{
         type:Number,
-        default:1 //1 ACTIVE 0 DELETE
+        default:0 //1 Loan Started 0 ending
     },
     status:{
         type:Number,
         default:1  
         /*0 APPROVED 1 PENDING 2 REJECTED */
     },
-    reason:{
-        type:String
+    openingDate:{
+        type:Date,
+        
     },
-    otherLoans:{
-        type:Number,
-        default:0 //0 -No
-    },
-    loanDetails:{
-        type:String
+    closingDate:{
+        type:Date
     }
 },{
     timestamps:true
 }))
 
-module.exports= Application;
+module.exports= Loan;
