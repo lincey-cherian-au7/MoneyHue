@@ -15,4 +15,7 @@ router.get('/updateappln/:userid/:applnid',applicationController.updateAppln);
 /*POST Method Application Update */
 router.post('/updateappln/:userid/:applnid',applicationController.updateApplication );
 
+/*DELETE method Application */
+router.delete('/deleteappln/:userid/:applnid',applicationController.deleteApplication );
+
 module.exports =router;

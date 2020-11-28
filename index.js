@@ -21,6 +21,7 @@ app.use(cookieParser());
 //Routes
 const userRouter = require('./routes/user.routes')
 const ApplnRouter = require('./routes/application.routes')
+const AdminRouter = require('./routes/admin.routes');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -38,3 +39,4 @@ app.listen(PORT, () => console.log('Listening on Port:', PORT));
 
 app.use('/',userRouter);
 app.use('/',ApplnRouter);
+app.use('/',AdminRouter);
