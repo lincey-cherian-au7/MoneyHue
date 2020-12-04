@@ -39,10 +39,10 @@ class MainPage extends Component {
                     </div>
                 </div>
                 <div className="button_section">
-                    <button class="btn-light btn-lg button" onClick={setApplication} type="submit" href="">Personal Loan</button>
-                    <button class="btn-light btn-lg button ">Home Loan</button>
-                    <button class="btn-light btn-lg button ">Car Loan</button>
-                    <button class="btn-light btn-lg button ">Credit Card</button>
+                    <button class="btn-light button btn-lg" style={{width:"260px",height:"90px",fontSize:"20px"}} onClick={setApplication} type="submit" href="">Personal Loan</button>
+                    <button class="btn-light btn-lg button "style={{width:"260px",height:"90px",fontSize:"20px"}}>Home Loan</button>
+                    <button class="btn-light btn-lg button "style={{width:"260px",height:"90px",fontSize:"20px"}}>Car Loan</button>
+                    <button class="btn-light btn-lg button "style={{width:"260px",height:"90px",fontSize:"20px"}}>Credit Card</button>
                 </div>
                 
                 <CalculatorModal
@@ -96,9 +96,7 @@ class MainPage extends Component {
                     </div>
                 </div>
                 <div/>
-                <Card>
-                    <Card.Footer style={{backgroundColor:"#5F021F",color:"white", fontSize:"small"}}>CopyRight @2020 MoneyHue Private Limited.</Card.Footer>
-                </Card>
+             
                 
                 
             </div>

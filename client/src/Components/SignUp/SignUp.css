@@ -14,6 +14,7 @@
 }
 img{
     height:160px;
+    
 }
 .title_box{
     color:#4d194d;
@@ -52,11 +53,11 @@ input{
     display:flex;
     width:100%;
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 label{
-    margin: 4px;
+    margin: 3px;
     color: white;
     font-size: large;
 }
@@ -80,7 +81,7 @@ label{
     width:125px;
     border-radius: 5px;
 }
-.wraper{
+.wraper_signup{
     width: 550px;
     height:503px;
     background:  #64485C;
@@ -97,6 +98,7 @@ label{
     color:white;
     text-decoration: none;
     font-size: large;
+   padding-left: 40%;
 }
      
 

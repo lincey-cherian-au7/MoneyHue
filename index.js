@@ -17,6 +17,7 @@ app.use(morgan('dev'));
 app.use(expressValidator())
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(cors());
 
 //Routes
 const userRouter = require('./routes/user.routes')
