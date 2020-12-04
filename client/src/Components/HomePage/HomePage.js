@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import './HomePage.css'
-import {Card} from 'react-bootstrap'
+// import {Card} from 'react-bootstrap'
 import ApplicationCard from '../ApplicationCard/ApplicationCard'
 import InfoCard from '../InfoCard/InfoCard'
-import FooterCard from '../FooterCard/FooterCard'
+// import FooterCard from '../FooterCard/FooterCard'
 
 class HomePage extends Component {
     render() {
@@ -18,12 +18,12 @@ class HomePage extends Component {
                     </div>
                    
                 </div>
-                <div className="footer_container">
+                {/* <div className="footer_container">
                     <FooterCard/> 
                 </div>
                 <Card >
                     <Card.Footer style={{backgroundColor:"#5F021F",color:"white", fontSize:"small"}}>CopyRight @2020 MoneyHue Private Limited.</Card.Footer>
-                </Card>
+                </Card> */}
                   
             </div>
         )

@@ -69,7 +69,7 @@ userController.registerUser =async(req,res)=>{
     //sendOTP(req.body.mobile,otp)
 
     emailVerify(req.body.email,emailToken,seq); 
-    return res.json({message:"User Added Sucessfully"})
+    return res.json(data)
 }
 
 //Mobile verification Function
@@ -148,23 +148,24 @@ userController.login =async(req,res)=>{
     let email = req.body.email
     let password= req.body.password
     let userData = await User.findOne({email})
-    if(!userData)
+    if(!userData){
         return res.status(201).json({message:"User doesnot exist"})
+    }
     else{
-        if(!userData.verify==0){  //To change
-            if(userData.emailverify==0){
-                console.log(!userData.verify)
-                return res.status(201).json({message:'Mobile and Email Verification Pending.'})
-            }else{
-                return res.status(201).json({message:"Mobile verification is pending"})
-            }
+        // if(!userData.verify==0){  //To change
+        //     if(userData.emailverify==0){
+        //         console.log(!userData.verify)
+        //         return res.status(201).json({message:'Mobile and Email Verification Pending.'})
+        //     }else{
+        //         return res.status(201).json({message:"Mobile verification is pending"})
+        //     }
             
-        }else{
-            if(userData.emailverify==0){
-                return res.status(201).json({message:'Email Verification Pending.'})
-            }
+        // }else{
+        //     if(userData.emailverify==0){
+        //         return res.status(201).json({message:'Email Verification Pending.'})
+        //     }
         
-        }
+        // }
         bcrypt.compare(password, userData.password, (err, isMatch)=>{
             if(err)
                 return res.status(401).json({message:'Password doesnot match'})
